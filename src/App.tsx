@@ -29,7 +29,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, tabs, onNewTabClick }) => {
   return (
     <div className="w-1/6 bg-cyan-50 rounded border my-4 p-4">
-      {tabs.map((tab, index) => (
+      {tabs.map((_, index) => (
         <Tab
           key={index}
           id={index}
@@ -70,7 +70,7 @@ const JsonParserWithTabs: React.FC = () => {
         />
         <div className="flex-1">
           {tabs.map((tab, index) => (
-            <div key={index} className={index === activeTab ? '' : 'hidden'}>
+            <div key={index} className={index === activeTab ? "" : "hidden"}>
               {tab}
             </div>
           ))}
